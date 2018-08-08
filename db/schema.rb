@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2018_08_07_164049) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.integer "like_number", default: 0
@@ -27,7 +30,7 @@ ActiveRecord::Schema.define(version: 2018_08_07_164049) do
     t.integer "like_no", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "article_id"
+    t.bigint "article_id"
     t.index ["article_id"], name: "index_images_on_article_id"
   end
 
@@ -38,7 +41,7 @@ ActiveRecord::Schema.define(version: 2018_08_07_164049) do
     t.integer "like_no", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "article_id"
+    t.bigint "article_id"
     t.index ["article_id"], name: "index_texts_on_article_id"
   end
 
