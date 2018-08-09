@@ -18,8 +18,12 @@ tables.each do |table|
 end
 articleroot = Article.create!(title: 'Book124')
 
-Text.create!(order: 1, article: articleroot, headline: 'AAA', sentences: 'Simple')
+Text.create!(order: 12, article: articleroot, headline: 'AAA', sentences: 'Simple')
 Text.create!(order: 2, article: articleroot, headline: 'AAAB', sentences: 'Simple1')
+Text.create!(order: 9, article: articleroot, headline: 'AAAB', sentences: 'Simple1')
+Text.create!(order: 1, article: articleroot, headline: 'AAAB', sentences: 'Simple1')
 
 Image.create!(order: 1, article: articleroot, headline: 'AA', URL_image: 'hhtml')
-Image.create!(order: 2, article: articleroot, headline: 'AAB', URL_image: 'hhtml1')
+Image.create!(order: 8, article: articleroot, headline: 'AA', URL_image: 'hhtml')
+Image.create!(order: 2, article: articleroot, headline: 'AA', URL_image: 'hhtml')
+Image.create!(order: 7, article: articleroot, headline: 'AAB', URL_image: 'hhtml1')
